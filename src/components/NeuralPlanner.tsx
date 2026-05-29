@@ -22,8 +22,22 @@ export function NeuralPlanner() {
   const sync = () => {
     if (progress < 100 || syncing !== "idle") return;
     setSyncing("loading");
-    setTimeout(() => setSyncing("done"), 1800);
-    setTimeout(() => setSyncing("idle"), 4500);
+    setTimeout(() => {
+      setSyncing("done");
+      const subject = encodeURIComponent(`Nexamind Project Sync: ${name}`);
+      const body = encodeURIComponent(
+        `New project configuration received:\n\n` +
+        `Name: ${name}\n` +
+        `Services Required: ${services.join(', ')}\n\n` +
+        `Project Details:\n${details}\n`
+      );
+      window.location.href = `mailto:nexa2mind@gmail.com?subject=${subject}&body=${body}`;
+    }, 1800);
+    setTimeout(() => {
+      setSyncing("idle");
+      // Optional: reset form
+      // setServices([]); setName(""); setDetails("");
+    }, 4500);
   };
 
   return (
