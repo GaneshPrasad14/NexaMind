@@ -18,10 +18,6 @@ export default function Home() {
         <div className="absolute inset-0 grid-bg opacity-40 pointer-events-none [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_75%)]" />
         <div className="relative mx-auto max-w-7xl grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-center">
           <div>
-            <div className="inline-flex items-center gap-2 rounded-full glass-panel px-4 py-1.5 text-[10px] tracking-[0.3em] font-display mb-8">
-              <span className="h-1.5 w-1.5 rounded-full animate-pulse-glow" style={{ background: "var(--neon)" }} />
-              SYSTEM ONLINE — ACCEPTING SIGNAL
-            </div>
             <img src="/logo.png" alt="Nexamind Logo" className="h-20 md:h-28 w-auto mb-6 drop-shadow-[0_0_20px_rgba(255,255,255,0.4)]" />
             <h1 className="font-display font-bold leading-[0.92] tracking-tight text-[clamp(2.8rem,7vw,6.5rem)]">
               Where Creative<br />
@@ -39,7 +35,7 @@ export default function Home() {
                 Browse Services
               </MagneticButton>
             </div>
-            <div className="mt-14 grid grid-cols-3 max-w-md gap-6 text-sm">
+            <div className="mt-14 grid grid-cols-2 sm:grid-cols-3 max-w-md gap-6 text-sm">
               {[
                 { k: "120+", v: "Synapses shipped" },
                 { k: "8ms", v: "Avg. response" },
@@ -97,8 +93,9 @@ export default function Home() {
                   Send a signal. We reply within one orbit (≈24 hours).
                 </p>
                 <a href="mailto:nexa2mind@gmail.com"
-                  className="inline-flex items-center gap-3 text-2xl font-display font-bold border-b border-white/20 pb-2 hover:border-[color:var(--neon)] transition-colors">
-                  nexa2mind@gmail.com →
+                  className="inline-flex items-center gap-2 md:gap-3 text-lg md:text-2xl font-display font-bold border-b border-white/20 pb-2 hover:border-[color:var(--neon)] transition-colors max-w-full">
+                  <span className="truncate">nexa2mind@gmail.com</span>
+                  <span>→</span>
                 </a>
               </div>
             </div>
