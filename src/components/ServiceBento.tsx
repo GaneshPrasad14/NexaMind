@@ -27,7 +27,7 @@ function WebDevBlock() {
     { c: "render", v: "(<NexamindCore /> → ✓ compiled" },
   ];
   return (
-    <GlassBlock className="md:col-span-2 row-span-1 p-6 min-h-[280px]">
+    <GlassBlock className="order-1 md:order-none md:col-span-2 row-span-1 p-6 min-h-[280px]">
       <div className="flex items-center justify-between mb-4">
         <span className="text-xs font-display tracking-widest text-[color:var(--cherry)]">01 / WEB DEVELOPMENT</span>
         <div className="flex gap-1.5">
@@ -56,7 +56,7 @@ function WebDevBlock() {
 function AppDevBlock() {
   const [dark, setDark] = useState(true);
   return (
-    <GlassBlock className="p-6 min-h-[280px]">
+    <GlassBlock className="order-2 md:order-none p-6 min-h-[280px]">
       <span className="text-xs font-display tracking-widest text-[color:var(--cherry)]">02 / APP</span>
       <h3 className="text-2xl font-bold mt-2 mb-3">Native interfaces.</h3>
       <div className="mx-auto mt-2 w-[140px] rounded-[28px] p-2 transition-colors duration-500"
@@ -91,7 +91,7 @@ function AppDevBlock() {
 function LogoBlock() {
   const [hover, setHover] = useState(false);
   return (
-    <GlassBlock className="p-6 min-h-[280px]">
+    <GlassBlock className="order-3 md:order-none p-6 min-h-[280px]">
       <span className="text-xs font-display tracking-widest text-[color:var(--cherry)]">03 / LOGO</span>
       <h3 className="text-2xl font-bold mt-2 mb-3">Marks with geometry.</h3>
       <div onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}
@@ -122,7 +122,7 @@ function LogoBlock() {
 function PosterBlock() {
   const [hover, setHover] = useState(false);
   return (
-    <GlassBlock className="md:col-span-2 p-6 min-h-[280px]">
+    <GlassBlock className="order-4 md:order-none md:col-span-2 p-6 min-h-[280px]">
       <div className="flex items-center justify-between mb-3">
         <span className="text-xs font-display tracking-widest text-[color:var(--cherry)]">04 / POSTER</span>
         <span className="text-xs text-muted-foreground font-mono">EDITION 03 / 04</span>
@@ -163,7 +163,7 @@ function SEOBlock() {
   const baseLine = "M 10 80 Q 40 70 70 65 T 130 50 T 190 45";
   const spikeLine = "M 10 90 Q 40 85 70 70 T 130 30 T 190 12";
   return (
-    <GlassBlock className="row-span-2 p-6 min-h-[280px] flex flex-col">
+    <GlassBlock className="order-5 md:order-none row-span-2 p-6 min-h-[280px] flex flex-col">
       <span className="text-xs font-display tracking-widest text-[color:var(--cherry)]">05 / SEO + BRAND</span>
       <h3 className="text-2xl font-bold mt-2 mb-3">Growth, measured.</h3>
       <div onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}
